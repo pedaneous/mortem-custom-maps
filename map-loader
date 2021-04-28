@@ -1,4 +1,5 @@
 print("Mortem Map Loader by Gilbert")
+print("V1")
 
 local MapLoader = Instance.new("Model")
 MapLoader.Name = "MapLoader"
