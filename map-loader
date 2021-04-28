@@ -1,3 +1,5 @@
+print("Mortem Map Loader by Gilbert")
+
 local MapLoader = Instance.new("Model")
 MapLoader.Name = "MapLoader"
 MapLoader.Parent = workspace
