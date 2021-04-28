@@ -256,3 +256,6 @@ local PointLight2 = Instance.new("PointLight")
 PointLight2.Color = Color3.fromRGB(255, 0, 0)
 PointLight2.Parent = Trigger
 
+InitComputer.MouseButton1Click:Connect(function()
+	Main.Visible = true
+end)
