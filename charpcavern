@@ -1,3 +1,4 @@
+print("Loading cavern")
 mas = Instance.new("Model",game:GetService("Lighting"))
 Model0 = Instance.new("Model")
 Model0.Name = "CUSTOM_MAP"
