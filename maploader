@@ -1,6 +1,9 @@
 print("Mortem Map Loader by Gilbert")
 print("V1")
 
+local CLONEMAP = workspace.CurrentMap:Clone()
+CLONEMAP.Parent = game.ReplicatedStorage
+
 local MapLoader = Instance.new("Model")
 MapLoader.Name = "MapLoader"
 MapLoader.Parent = workspace
