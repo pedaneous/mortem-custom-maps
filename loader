@@ -6,7 +6,6 @@ CLONEMAP.Parent = game.ReplicatedStorage
 
 local MapLoader = Instance.new("Model")
 MapLoader.Name = "MapLoader"
-MapLoader.Parent = workspace
 
 local Part = Instance.new("Part")
 Part.Anchored = true
