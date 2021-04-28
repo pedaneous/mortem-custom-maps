@@ -259,3 +259,39 @@ PointLight2.Parent = Trigger
 InitComputer.MouseButton1Click:Connect(function()
 	Main.Visible = true
 end)
+
+function deleteDefault()
+	for i,v in pairs(workspace:GetChildren()) do
+		if v.Name == "CurrentMap" then
+			v:Destroy()
+		end
+	end
+end
+
+function clearRecent()
+	if workspace:FindFirstChild("CUSTOM_MAP") then
+		workspace:FindFirstChild("CUSTOM_MAP"):Destroy()
+	end
+end
+
+function restore()
+	local tmp = CLONEMAP:Clone()
+	tmp.Parent = workspace
+end
+
+function reset()
+	deleteDefault()
+	clearRecent()
+end
+
+Map.MouseButton1Click:Connect(function()
+	reset()
+	MapName.Text = "Current Map: Default Map"
+	restore()
+end)
+
+Map2.MouseButton1Click:Connect(function()
+	reset()
+	MapName.Text = "Current Map: Charp Cavern"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/charpcavern"))()
+end)
