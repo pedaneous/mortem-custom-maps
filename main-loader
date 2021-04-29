@@ -409,3 +409,18 @@ Map3.MouseButton1Click:Connect(function()
 	MapName.Text = "Current Map: Gilbert Obby"
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/gilbertobby"))()
 end)
+
+local lp = game.Players.LocalPlayer
+
+while wait() do
+	if lp.Character ~= nil then
+		if lp.Character.HumanoidRootPart ~= nil then
+			if lp.Character.HumanoidRootPart.Position.Y < -9 then
+				reset()
+				MapName.Text = "Current Map: Default Map"
+				restore()
+				print("Successfully restored map!")
+			end
+		end
+	end
+end
