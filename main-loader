@@ -207,7 +207,7 @@ Map.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Map.FontSize = Enum.FontSize.Size14
 Map.TextSize = 14
 Map.TextColor3 = Color3.fromRGB(255, 255, 255)
-Map.Text = "Test Map"
+Map.Text = "Default Map"
 Map.Font = Enum.Font.SourceSans
 Map.Parent = MapList
 
