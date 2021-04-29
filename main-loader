@@ -405,5 +405,7 @@ Map2.MouseButton1Click:Connect(function()
 end)
 
 Map3.MouseButton1Click:Connect(function()
-
+	reset()
+	MapName.Text = "Current Map: Gilbert Obby"
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/gilbertobby"))()
 end)
