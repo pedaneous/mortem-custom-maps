@@ -392,25 +392,28 @@ Back.MouseButton1Click:Connect(function()
 	Settings.Visible = false
 end)
 
+local canTrigger = true
 local selectedMap = ""
 
 Map.MouseButton1Click:Connect(function()
 	selectedMap = "default"
 	MapName.Text = "Current Map: Default"
+	canTrigger = true
 end)
 
 Map2.MouseButton1Click:Connect(function()
 	selectedMap = "charpcavern"
 	MapName.Text = "Current Map: Charp Cavern"
+	canTrigger = true
 end)
 
 Map3.MouseButton1Click:Connect(function()
 	selectedMap = "gilbertobby"
 	MapName.Text = "Current Map: Gilbert Obby"
+	canTrigger = true
 end)
 
 local lp = game.Players.LocalPlayer
-local canTrigger = false
 
 Trigger.Touched:Connect(function(hit)
 	if hit.Parent:FindFirstChild("Humanoid") and canTrigger then
