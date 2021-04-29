@@ -1,5 +1,5 @@
 local Obby = Instance.new("Model")
-Obby.Name = "Obby"
+Obby.Name = "CUSTOM_MAP"
 Obby.Parent = workspace
 
 local Part = Instance.new("Part")
