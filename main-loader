@@ -395,31 +395,32 @@ end)
 local canTrigger = false
 local selectedMap = ""
 
+function activateColors()
+	Trigger.Color = Color3.fromRGB(0, 255, 0)
+	PointLight.Color = Color3.fromRGB(0, 255, 0)
+	PointLight1.Color = Color3.fromRGB(0, 255, 0)
+	Part1.Color = Color3.fromRGB(0, 255, 0)
+end
+
 Map.MouseButton1Click:Connect(function()
 	selectedMap = "default"
 	MapName.Text = "Current Map: Default"
 	canTrigger = true
-	Trigger.Color = Color3.fromRGB(0, 255, 0)
-	PointLight.Color = Color3.fromRGB(0, 255, 0)
-	PointLight1.Color = Color3.fromRGB(0, 255, 0)
+	activateColors()
 end)
 
 Map2.MouseButton1Click:Connect(function()
 	selectedMap = "charpcavern"
 	MapName.Text = "Current Map: Charp Cavern"
 	canTrigger = true
-	Trigger.Color = Color3.fromRGB(0, 255, 0)
-	PointLight.Color = Color3.fromRGB(0, 255, 0)
-	PointLight1.Color = Color3.fromRGB(0, 255, 0)
+	activateColors()
 end)
 
 Map3.MouseButton1Click:Connect(function()
 	selectedMap = "gilbertobby"
 	MapName.Text = "Current Map: Gilbert Obby"
 	canTrigger = true
-	Trigger.Color = Color3.fromRGB(0, 255, 0)
-	PointLight.Color = Color3.fromRGB(0, 255, 0)
-	PointLight1.Color = Color3.fromRGB(0, 255, 0)
+	activateColors()
 end)
 
 local lp = game.Players.LocalPlayer
