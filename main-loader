@@ -392,32 +392,44 @@ Back.MouseButton1Click:Connect(function()
 	Settings.Visible = false
 end)
 
+local selectedMap = ""
+
 Map.MouseButton1Click:Connect(function()
-	reset()
-	MapName.Text = "Current Map: Default Map"
-	restore()
+	selectedMap = "default"
+	MapName.Text = "Current Map: Default"
 end)
 
 Map2.MouseButton1Click:Connect(function()
-	reset()
+	selectedMap = "charpcavern"
 	MapName.Text = "Current Map: Charp Cavern"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/charpcavern"))()
 end)
 
 Map3.MouseButton1Click:Connect(function()
-	reset()
+	selectedMap = "gilbertobby"
 	MapName.Text = "Current Map: Gilbert Obby"
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/gilbertobby"))()
 end)
 
 local lp = game.Players.LocalPlayer
+local canTrigger = false
+
+Trigger.Touched:Connect(function(hit)
+	if hit.Parent:FindFirstChild("Humanoid") and canTrigger then
+		canTrigger = false
+		reset()
+		if selectedMap == "default" then
+			restore()
+		else
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/"..selectedMap))()
+		end
+	end
+end)
 
 while wait() do
 	if lp.Character ~= nil then
 		if lp.Character.HumanoidRootPart ~= nil then
 			if lp.Character.HumanoidRootPart.Position.Y < -9 then
 				reset()
-				MapName.Text = "Current Map: Default Map"
+				MapName.Text = "Current Map: Default"
 				restore()
 				print("Successfully restored map!")
 			end
