@@ -9,3 +9,6 @@ From there, you will have a bunch of maps to select, along with the Default Map 
 
 To create your own maps for Mortem Map Loader, you could adapt this script to work for it, or you can submit the model, in which it will be verified, and maybe added.
 Once you choose a map, step into the portal in which the map will appear.
+
+The loadstring to load the computer will be:
+loadstring(game:HttpGet("https://raw.githubusercontent.com/pedaneous/mortem-custom-maps/main/main-loader"))()
