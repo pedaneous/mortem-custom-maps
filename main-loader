@@ -185,6 +185,7 @@ Main.ZIndex = 2
 Main.Size = UDim2.new(0.8, 0, 0.8, 0)
 Main.Position = UDim2.new(0.1, 0, 0.1, 0)
 Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.Visible = false
 Main.Parent = SurfaceGui
 
 local MapList = Instance.new("ScrollingFrame")
