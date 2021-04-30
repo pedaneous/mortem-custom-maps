@@ -233,6 +233,10 @@ Map3.Text = "Gilbert Obby"
 Map3.Font = Enum.Font.SourceSans
 Map3.Parent = MapList
 
+local Map4 = Map3:Clone()
+Map4.Text = "Western Land"
+Map4.Parent = MapList
+
 local SettingsToggle = Instance.new("TextButton")
 SettingsToggle.Name = "SettingsToggle"
 SettingsToggle.Size = UDim2.new(1, 0, 0.2, 0)
@@ -419,6 +423,13 @@ end)
 Map3.MouseButton1Click:Connect(function()
 	selectedMap = "gilbertobby"
 	MapName.Text = "Current Map: Gilbert Obby"
+	canTrigger = true
+	activateColors()
+end)
+
+Map4.MouseButton1Click:Connect(function()
+	selectedMap = "western-land"
+	MapName.Text = "Current Map: Western Land"
 	canTrigger = true
 	activateColors()
 end)
