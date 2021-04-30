@@ -428,7 +428,7 @@ Map3.MouseButton1Click:Connect(function()
 end)
 
 Map4.MouseButton1Click:Connect(function()
-	selectedMap = "mortemwesternland"
+	selectedMap = "westernmortemland"
 	MapName.Text = "Current Map: Western Land"
 	canTrigger = true
 	activateColors()
