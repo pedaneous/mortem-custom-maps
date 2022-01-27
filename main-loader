@@ -438,7 +438,7 @@ Map4.MouseButton1Click:Connect(function()
 	activateColors()
 end)
 
-Map4.MouseButton1Click:Connect(function()
+Map5.MouseButton1Click:Connect(function()
 	selectedMap = "monkeycavern"
 	MapName.Text = "Current Map: Monkey Cavern"
 	canTrigger = true
