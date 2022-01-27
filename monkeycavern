@@ -15597,7 +15597,7 @@ Sound1210.Playing = true
 Sound1210.SoundId = "rbxassetid://1116476349"
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = workspace
-	v.Position += Vector3.new(0,-6,0)
+	v.Position += Vector3.new(0,-15,0)
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
