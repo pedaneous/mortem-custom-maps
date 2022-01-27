@@ -237,6 +237,10 @@ local Map4 = Map3:Clone()
 Map4.Text = "Western Land"
 Map4.Parent = MapList
 
+local Map5 = Map3:Clone()
+Map5.Text = "Monkey Cavern"
+Map5.Parent = MapList
+
 local SettingsToggle = Instance.new("TextButton")
 SettingsToggle.Name = "SettingsToggle"
 SettingsToggle.Size = UDim2.new(1, 0, 0.2, 0)
@@ -430,6 +434,13 @@ end)
 Map4.MouseButton1Click:Connect(function()
 	selectedMap = "westernmortemland"
 	MapName.Text = "Current Map: Western Land"
+	canTrigger = true
+	activateColors()
+end)
+
+Map4.MouseButton1Click:Connect(function()
+	selectedMap = "monkeycavern"
+	MapName.Text = "Current Map: Monkey Cavern"
 	canTrigger = true
 	activateColors()
 end)
