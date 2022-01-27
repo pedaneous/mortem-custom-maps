@@ -1228,7 +1228,7 @@ Part1207 = Instance.new("Part")
 Part1208 = Instance.new("Part")
 Part1209 = Instance.new("Part")
 Sound1210 = Instance.new("Sound")
-Model0.Name = "MonkeyCaverns"
+Model0.Name = "CUSTOM_MAP"
 Model0.Parent = mas
 Part1.Parent = Model0
 Part1.CFrame = CFrame.new(158.856918, 93.3473282, -120.226952, 0, 0, -0.999996543, 0, 0.999996781, 0, 0.999999762, 0, 0)
@@ -15597,7 +15597,6 @@ Sound1210.Playing = true
 Sound1210.SoundId = "rbxassetid://1116476349"
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = workspace
-	v.Position += Vector3.new(0,-15,0)
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
@@ -15605,4 +15604,10 @@ for i,v in pairs(cors) do
 	spawn(function()
 		pcall(v)
 	end)
+end
+
+for i,v in pairs(workspace.CUSTOM_MAP:GetDescendants()) do
+    if v:IsA("BasePart") then
+        v.Position += Vector3.new(0,-27,0)    
+    end
 end
