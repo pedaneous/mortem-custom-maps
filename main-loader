@@ -443,7 +443,10 @@ Map5.MouseButton1Click:Connect(function()
 	MapName.Text = "Current Map: Monkey Cavern"
 	canTrigger = true
 	activateColors()
+	print("MONKEY!")
 end)
+
+--muh
 
 local lp = game.Players.LocalPlayer
 
