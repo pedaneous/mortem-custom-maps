@@ -241,6 +241,10 @@ local Map5 = Map3:Clone()
 Map5.Text = "Monkey Cavern"
 Map5.Parent = MapList
 
+local Map6 = Map3:Clone()
+Map6.Text = "Da Hood"
+Map6.Parent = MapList
+
 local SettingsToggle = Instance.new("TextButton")
 SettingsToggle.Name = "SettingsToggle"
 SettingsToggle.Size = UDim2.new(1, 0, 0.2, 0)
@@ -444,6 +448,13 @@ Map5.MouseButton1Click:Connect(function()
 	canTrigger = true
 	activateColors()
 	print("MONKEY!")
+end)
+
+Map6.MouseButton1Click:Connect(function()
+	selectedMap = "dahood"
+	MapName.Text = "Current Map: Da Hood"
+	canTrigger = true
+	activateColors()
 end)
 
 --muh
